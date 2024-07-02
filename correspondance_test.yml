@@ -1,0 +1,7 @@
+corr_list :
+  SNK1-A(1) :
+    CTD_path : "./CTD_Alaska/SKQ202409S_004.cnv"
+    RBR_path : "./RBR_Alaska/234446_20240624_1925.rsk"
+    RBR_index : [1]
+    date : "2024-06-25 01:47:56"
+    mounting : "bottom"
