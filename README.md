@@ -1,4 +1,5 @@
-# Sikuliaq_CTD_RBR_proc ![alt text](http://url/to/img.png)
+<img src="https://github.com/GITHORU/Sikuliaq_CTD_RBR_proc/blob/main/logo/logo_blue.png" width="400"></img>
+# Sikuliaq_CTD_RBR_proc 
 ## Setup
 ### Python environment
 First, clone this repository. Then cd into the created directory. To create a Python venv :
