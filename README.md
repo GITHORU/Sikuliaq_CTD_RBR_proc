@@ -23,4 +23,27 @@ This repos only contains 1 example of each type of file (CTD, SVP and RBR). GitH
 You should put the cnv files in the "CTD_Alaska" directory, while the rsk files go to the RBR_Alaska
 ## Tools
 ### Readers
-The file "Readers.py"
+The file "Readers.py" contains a set a class and tools to manipulate CTD, SVP and RBR files.
+#### CTD
+CTDs or represented by the class CTD_cnv, which is used to load the data and to get easily needed informations.
+To declare a CTD_cnv :
+```
+path = "./CTD_Alaska/SKQ202409S_001.cnv"
+ctd = CTD_cnv(path)
+```
+You can then access the data (Temperature, Pressure, PSalinity, Depths, Timestamps, coordinates, etc): 
+```
+l_temp = ctd.get_l_temp()
+l_pres = ctd.get_l_pres()
+l_psal = ctd.get_l_psal()
+l_depth= ctd.get_l_depth()
+l_ts_s = ctd.get_l_ts(unit="s")
+l_ts_m = ctd.get_l_ts(unit="m")
+l_ts_h = ctd.get_l_ts(unit="h")
+lat, lon = ctd.get_lat(), ctd.get_lon()
+```
+You can also acces the starting time the CTD :
+```
+st = ctd.start_time
+```
+
