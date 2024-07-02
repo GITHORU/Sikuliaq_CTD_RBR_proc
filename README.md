@@ -1,4 +1,4 @@
-<img src="https://github.com/GITHORU/Sikuliaq_CTD_RBR_proc/blob/main/logo/logo_blue.png" width="300"></img>
+<img src="https://github.com/GITHORU/Sikuliaq_CTD_RBR_proc/blob/main/logo/logo_blue.png" width="400"></img>
 # Sikuliaq_CTD_RBR_proc 
 ## Setup
 ### Python environment
