@@ -11,11 +11,12 @@ import numpy as np
 from datetime import datetime, timedelta
 
 
-def ax2profile(ax, xlabel="", ylabel="", zlabel="", title="", invert = True):
+def ax2profile(ax, xlabel="", ylabel="", zlabel="", title="", invert = True, legend=True):
     if invert :
         ax.invert_yaxis()
     ax.grid()
-    ax.legend()
+    if legend :
+        ax.legend()
     if xlabel != "" :
         ax.set_xlabel(xlabel)
     if ylabel != "" :
@@ -36,8 +37,9 @@ class Profile_file :
         self.start_time = profile.attrs["datetime"]
         dict = {key:profile[key] for key in profile.keys()}
         self.data = pd.DataFrame(dict)
-        l_ts = [ts for ts in list(self.data["timeM"])]
-        self.middle_time = self.start_time  + timedelta(minutes=max(l_ts))
+        if "timeM" in profile.keys() :
+            l_ts = [ts for ts in list(self.data["timeM"])]
+            self.middle_time = self.start_time  + timedelta(minutes=max(l_ts))
 
 
     def load_data_rsk(self):
