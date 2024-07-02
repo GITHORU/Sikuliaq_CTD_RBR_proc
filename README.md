@@ -68,7 +68,7 @@ You can then format the figures as an ocean profile using :
 ax2profile(ax, xlabel="Temperature (°C)", ylabel="Depth (m)", zlabel="", title="My graph", invert = True)
 plt.show()
 ```
-(NB : The invert attribute descide if the Y axis should be inverted (positive pressure/depth) or not)
+(NB : The invert attribute decides if the Y axis should be inverted (positive pressure/depth) or not)
 You can finally plot a 3D graph containing the Temperature, Salinity and Depth data :
 ```
 fig = plt.figure()
@@ -78,12 +78,12 @@ ax2profile(ax_STD, xlabel="PSal", ylabel="Temperature (°C)", zlabel="Depth (m)"
 plt.show()
 ```
 #### SVP
-SVPs are represented by the class SVP_cnv. It is close to a CTD_cnv object. The only difference reside in the data you can extract. as Temperature, Salinity and Pressure are used to calculate the Sound speed, you cannot acces those informations. But you can acces Soundspeed. Their are theirfore the aditionnal scattering methods for soundspeed:
+SVPs are represented by the class SVP_cnv. It is close to a CTD_cnv object. The only difference resides in the data you can extract. As Temperature, Salinity and Pressure are used to calculate the Sound speed, you cannot access that information. But you can access soundspeed. There is therefore the additional scattering methods for soundspeed:
 ```
 ctd.scatter_VD(ax, s=2, marker="+", color="orange", label="CTD n°1")
 ```
 #### RBR
-RBR files are differents. It devide the data in down and up profile of temperature vs pressure. One file can contain multiple profiles. To simplify the reading of this files, it is represented as the RBR class. This class was made to be used in the same was thant the cnv files. The difference reside in the fact that when you are asking for data, you need to give in input the direction (either "up" or "down"), and the index of the profile.
+RBR files are different. It divides the data in down and up profiles of temperature vs pressure. One file can contain multiple profiles. To simplify the reading of those files, it is represented as the RBR class. This class was made to be used in the same way than the cnv files. The difference resides in the fact that when you are asking for data, you need to give in input the direction (either "up" or "down"), and the index of the profile.
 To load the file :
 ```
 rbr = RBR("./RBR_Alaska/234446_20240621_1514.rsk")
@@ -94,7 +94,7 @@ l_temp = rbr.get_l_temp("up", 0)
 l_pres = rbr.get_l_pres("up", 0)
 l_ts   = rbr.get_l_ts("up", 0)
 ```
-You can also get the time range of a up+down profile using :
+You can also get the time range of an up+down profile using :
 ```
 tmin, tmax = rbr.get_time_range(0)
 ```
