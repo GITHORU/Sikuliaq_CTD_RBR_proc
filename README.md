@@ -75,6 +75,7 @@ fig = plt.figure()
 ax = fig.add_subplot(projection="3d")
 ctd.scatter_3D_STD(ax, s=2, marker="+", color="purple", label="CTD n°1")
 ax2profile(ax_STD, xlabel="PSal", ylabel="Temperature (°C)", zlabel="Depth (m)", title="Temp vs Depth", invert=False)
+plt.show()
 ```
 #### SVP
 SVPs are represented by the class SVP_cnv. It is close to a CTD_cnv object. The only difference reside in the data you can extract. as Temperature, Salinity and Pressure are used to calculate the Sound speed, you cannot acces those informations. But you can acces Soundspeed. Their are theirfore the aditionnal scattering methods for soundspeed:
@@ -107,4 +108,11 @@ But also all down profiles or all up profiles
 rbr.scatter_TP_all_down(ax)
 rbr.scatter_TP_all_up(ax)
 ax2profile(ax, xlabel="Temperature (°C)", ylabel="Depth (m)", zlabel="", title="My graph", invert = True)
+plt.show()
 ```
+### main
+The main python file is used to plot the comparison between CTD data and RBR data when the RBR was attached to CTD. The correspondances between CTD files and the right RBR profile is recorded in the "correspondance.yml" file, then red by the main script.
+### Sal_model
+This file is an experimental file, trying toi fit a 3D model on all the Depth/Temperature/Psal, in order to find a relation between Psal and a f(Depth, Temperature).
+### corr_file_creator
+This is the Script used for matching RBR files and CTD files, which do not use the time in the same way. The result of this script is a YAML file which give a set of plausible matching data, which shoiuld be cleaned manually to only keep the true matches.
