@@ -17,7 +17,7 @@ corr_list :
     RBR_index : [1]
     date : "2024-06-26 01:40:31"
     mounting : "top?"
-  UNI1-B :
+  UNI1-B(2) :
     CTD_path : "./CTD_Alaska/SKQ202409S_006.cnv"
     RBR_path : "./RBR_Alaska/234446_20240627_1222.rsk"
     RBR_index : [2]

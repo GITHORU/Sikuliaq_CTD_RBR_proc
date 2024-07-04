@@ -28,7 +28,7 @@ def linear_interp(X, Y, val):
     return np.nan
 
 if __name__ == '__main__':
-    corr_path = "./correspondance.yml"
+    corr_path = "./correspondance_snk.yml"
     with open(corr_path, 'r') as file :
         corr_dict = yaml.safe_load(file)
 
